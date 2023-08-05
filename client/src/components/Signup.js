@@ -22,7 +22,7 @@ const Signup = () =>{
 
         const {name,email,phone,password,password2} = user;
         
-        const res = await fetch("/register",{
+        const res = await fetch("https://chatanaut.onrender.com/register",{
 
             method:"POST",
             headers:{

@@ -10,7 +10,7 @@ const Chat = () =>{
 
     const callchat = async () =>{
         try{
-            const res = await fetch('/chat',{
+            const res = await fetch('https://chatanaut.onrender.com/chat',{
                 method:"GET",
                 headers:{
                     Accept:"application/json",

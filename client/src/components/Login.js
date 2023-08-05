@@ -12,7 +12,7 @@ const Login = () =>{
 
     const log = async (e) => {
         e.preventDefault();
-        const res = await fetch('/signin',{
+        const res = await fetch('https://chatanaut.onrender.com/signin',{
             method:"POST",
             credentials:"include",
             headers:{
