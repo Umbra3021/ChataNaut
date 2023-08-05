@@ -2,11 +2,14 @@ const dotenv =require("dotenv");
 const mongoose = require('mongoose');
 const express =require('express');
 const app = express();
+var cors = require('cors');
 
 dotenv.config({path:'./config.env'});
 require('./db/conn');
 
 const User = require('./model/userSchema');
+app.use(cors())
+
 
 app.use(express.json());
 
