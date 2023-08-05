@@ -8,12 +8,12 @@ dotenv.config({path:'./config.env'});
 require('./db/conn');
 
 const User = require('./model/userSchema');
-app.use(cors(x => x
-    .AllowAnyMethod()
-    .AllowAnyHeader()
-    .SetIsOriginAllowed(origin => true) // allow any origin 
-    .AllowCredentials()));
-
+const corsOptions = {
+    AccessControlAllowOrigin: '*',
+    origin: 'https://chatanaut.onrender.com',
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE'
+}
+  app.use(cors(corsOptions))
 app.use(express.json());
 
 app.use(require('./router/auth'));
