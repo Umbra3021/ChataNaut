@@ -1,5 +1,9 @@
 const jwt = require('jsonwebtoken');
 const User = require("../model/userSchema");
+const cookieParser = require('cookie-Parser')
+
+router.use(cookieParser());
+
 
 const verify = async (req,res,next) =>{
     try{
