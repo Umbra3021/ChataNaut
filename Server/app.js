@@ -8,11 +8,11 @@ dotenv.config({path:'./config.env'});
 require('./db/conn');
 
 const User = require('./model/userSchema');
-app.UseCors(x => x
+app.use(cors(x => x
     .AllowAnyMethod()
     .AllowAnyHeader()
     .SetIsOriginAllowed(origin => true) // allow any origin 
-    .AllowCredentials());
+    .AllowCredentials()));
 
 app.use(express.json());
 
