@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken');
 const User = require("../model/userSchema");
-const cookieParser = require('cookie-Parser')
+const cookieParser = require('cookie-parser');
 
 router.use(cookieParser());
 
