@@ -8,8 +8,12 @@ dotenv.config({path:'./config.env'});
 require('./db/conn');
 
 const User = require('./model/userSchema');
-app.use(cors())
-
+app.use(cors({
+    origin: 'http://example.com', // use your actual domain name (or localhost), using * is not recommended
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'HEAD', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Origin', 'X-Requested-With', 'Accept', 'x-client-key', 'x-client-token', 'x-client-secret', 'Authorization'],
+    credentials: true
+}))
 
 app.use(express.json());
 
