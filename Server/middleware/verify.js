@@ -20,7 +20,7 @@ const verify = async (req,res,next) =>{
         next();
     }
     catch(error) {
-        res.status(401).send('Unauthorized');
+        res.status(401).send('Unauthorized:No Token Provided');
         console.log(error)
     }
 }
