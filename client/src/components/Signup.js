@@ -24,6 +24,7 @@ const Signup = () =>{
         
         const res = await fetch("https://chatanaut.onrender.com/register",{
 
+        credentials: "include", 
             method:"POST",
             headers:{
                 "Content-Type":"application/json"

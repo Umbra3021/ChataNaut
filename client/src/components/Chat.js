@@ -12,11 +12,11 @@ const Chat = () =>{
         try{
             const res = await fetch('https://chatanaut.onrender.com/chat',{
                 method:"GET",
+                credentials:"include",
                 headers:{
                     Accept:"application/json",
                     "Contet-Type":"application/json"
-                },
-                credentials:"include"
+                }
             });
 
             const data = await res.json();
